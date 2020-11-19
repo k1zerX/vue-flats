@@ -34,7 +34,7 @@ export default {
     host: process.env.HOST || '0.0.0.0',
   },
 
-  target: 'static',
+  target: 'server',
 
   head: {
     title: process.env.npm_package_name || '',
@@ -80,7 +80,6 @@ export default {
 
   build: {
     extend({ module, plugins }, obj) {
-      console.log(obj);
       const i = module.rules.findIndex(elem => elem.test.toString() === PosthtmlRule.test.toString());
       if (i >= 0) {
         module.rules[i] = PosthtmlRule;
