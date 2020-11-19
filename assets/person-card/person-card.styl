@@ -1,0 +1,20 @@
+.person-card
+  display inline-grid
+  grid-template-areas \
+    "name" \
+    "type"
+  gap 5px
+  padding @gap
+  width 250px
+
+  &_rounded
+    border-radius 5px
+
+  &_outlined
+    border 1px solid black
+
+  &__type
+    grid-area type
+
+  &__name
+    grid-area name

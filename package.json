@@ -1,0 +1,26 @@
+{
+  "version": "0.0.0",
+  "name": "flats",
+  "description": "Some awesome flats from Tyumen",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/proxy": "^2.0.1",
+    "cookie-universal-nuxt": "^2.1.4",
+    "nuxt": "^2.14.7",
+    "nuxt-client-init-module": "^0.1.9"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.11.2",
+    "posthtml-bem": "^0.2.2",
+    "posthtml-loader": "^2.0.1",
+    "posthtml-pug": "^1.0.2",
+    "pug": "^3.0.0",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^4.1.1"
+  }
+}

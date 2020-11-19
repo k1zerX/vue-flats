@@ -1,0 +1,70 @@
+.flat-card
+  position relative
+  overflow hidden
+  display grid
+  flex 1 1 auto
+  grid-template-rows 1fr auto
+  grid-template-columns 1fr auto
+  @media only screen and (max-width: 600px)
+    grid-template-areas \
+      "content content" \
+      "sum       like-btn"
+  @media only screen and (min-width: 600px)
+    grid-template-areas \
+      "content ." \
+      "content like-btn"
+    min-width 400px
+    max-width 500px
+
+  cardRadius = 10px
+  btnRadius = cardRadius * 3
+
+  &__content
+    grid-area content
+    padding 10px
+    display flex
+    gap 10px
+    flex-direction column
+    align-items flex-start
+
+  &_rounded
+    border-radius cardRadius cardRadius btnRadius cardRadius
+
+  &_type_raised
+    box-shadow 2px 2px 10px -5px black
+
+  &__title
+    grid-area title
+    color black
+
+  &__address
+    grid-area address
+    color black
+
+  &__attr-list
+    grid-area attr-list
+    color black
+
+    &-row
+      display flex
+      flex-direction row
+      gap 30px
+
+    &-column
+      display flex
+      flex-direction column
+
+    &-key
+      color black
+
+    &-val
+      color black
+
+  &__relative
+    grid-area relative
+
+  &__like-btn
+    grid-area like-btn
+    width btnRadius * 2
+    height @width
+    border-radius btnRadius 0 0 0
