@@ -28,7 +28,7 @@ export const actions = {
   },
 
   async UPDATE_FLATS({ commit }) {
-    await new Promise(resolve => setTimeout(resolve, 1000000)); // simulating request to DB
+    await new Promise(resolve => setTimeout(resolve, 1000)); // simulating request to DB
     const { response } = await this.$axios.$get('/api/flats.json');
 
     let flats = {};
